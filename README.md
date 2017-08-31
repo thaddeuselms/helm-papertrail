@@ -6,7 +6,7 @@ This is a helm templated deployment for papertrail.
 
 This chart will do the following:
 
-* The chart will deploy the log router [logspout](https://github.com/gliderlabs/logspout) as a deamonset to the current cluster and forward logs from the docker deamon to the specificed [papertrail](https://papertrailapp.com/) log destination.
+* The chart will deploy the log router [logspout](https://github.com/gliderlabs/logspout) as a deamonset to the current kubernetes cluster and forward logs from the docker deamon to the specificed [papertrail](https://papertrailapp.com/) log destination.
 
 
 ### Installing the chart
