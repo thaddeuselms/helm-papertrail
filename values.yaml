@@ -1,0 +1,21 @@
+# Default values for chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+image:
+  repository: gliderlabs/logspout
+  tag: v3.2.2
+  pullPolicy: IfNotPresent
+
+log:
+  level: syslog
+  destination: 
+  port: 
+
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 32Mi
+  requests:
+    cpu: 100m
+    memory: 32Mi
