@@ -9,13 +9,9 @@ This chart will do the following:
 * The chart will deploy the log router [logspout](https://github.com/gliderlabs/logspout) as a deamonset to the current kubernetes cluster and forward logs from the docker deamon to the specificed [papertrail](https://papertrailapp.com/) log destination.
 
 
-### Installing the chart
-To use this chart duplicate an existing folder in chart/values/ and modify the contents
-of the values.yaml in the duplicated directory using the table below as your reference.
-
 Installing the chart.
 ```bash
-helm upgrade --install <deployment name> . -f ./values/<environment>/values.yaml --namespace <namespace>
+helm upgrade --install <deployment name> . -f values.yaml --namespace <namespace>
 ```
 
 List the deployed charts
