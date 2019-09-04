@@ -14,6 +14,7 @@ spec:
         app: {{ template "fullname" . }}
         release: {{ .Release.Name }}
     spec:
+      priorityClassName: system-node-critical
       hostPID: true
       hostIPC: true
       hostNetwork: true
@@ -31,12 +32,12 @@ spec:
             initialDelaySeconds: 5
             periodSeconds: 5
           securityContext:
-            privileged: true  
+            privileged: true
           volumeMounts:
             - name: log
               mountPath: /var/run/docker.sock
           resources:
-{{ toYaml .Values.resources | indent 12 }}                 
+{{ toYaml .Values.resources | indent 12 }}
       volumes:
         - name: log
           hostPath:
